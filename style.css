@@ -1,0 +1,71 @@
+/* Global styles for consistent styling across all elements */
+* {
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    font-family: 'Poppins', sans-serif; /* Use 'Poppins' font with sans-serif fallback */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+.container {
+    width: 100%; /* Full width of the page */
+    min-height: 100vh; /* Full viewport height */
+    background: linear-gradient(111.3deg, rgb(74, 105, 187) 9.6%, rgb(205, 77, 204) 93.6%); /* Gradient background */
+    padding: 10px; /* Padding around the container */
+    display: flex; /* Use flexbox layout */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+}
+
+.main {
+    width: 100%; /* Full width within its parent */
+    max-width: 540px; /* Maximum width of 540px */
+    background-color: #fff; /* White background color */
+    margin: 100px auto 20px; /* Centered with top and bottom margins */
+    padding: 40px 30px 70px; /* Padding inside the box */
+    border-radius: 10px; /* Rounded corners */
+}
+
+.main h2, .main h3 {
+    color: #002765; /* Text color */
+    display: flex; /* Flexbox layout for alignment */
+    align-items: center; /* Vertical alignment */
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+#checkbox-container {
+    color: #002765; /* Text color */
+    display: flex; /* Flexbox layout for vertical stacking */
+    flex-direction: column; /* Arrange children in a column */
+    margin-bottom: 15px; /* Space below the container */
+}
+
+.custom-checkbox {
+    width: 17px; /* Width of the custom checkbox */
+    height: 17px; /* Height of the custom checkbox */
+    border: 2px solid #cd4dcc; /* Border color */
+    border-radius: 4px; /* Rounded corners for the checkbox */
+    display: inline-block; /* Display as inline-block */
+    margin-right: 8px; /* Margin to the right of checkbox */
+    position: relative; /* Relative positioning for the tick mark */
+    transition: background-color 0.3s, border-color 0.3s; /* Smooth transition for hover effects */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+/* Styles for the checked state of the custom checkbox */
+.custom-checkbox.checked {
+    background-color: #cd4dcc; /* Background color when checked */
+    border-color: #cd4dcc; /* Border color when checked */
+}
+
+/* Tick mark for the checked state */
+.custom-checkbox.checked::after {
+    content: ''; /* Empty content for the tick mark */
+    position: absolute; /* Absolute positioning within the checkbox */
+    left: 4px; /* Position from the left */
+    top: 0; /* Position from the top */
+    width: 5px; /* Width of the tick mark */
+    height: 10px; /* Height of the tick mark */
+    border: solid white; /* White color for the tick */
+    border-width: 0 2px 2px 0; /* Borders to create the tick shape */
+    transform: rotate(45deg); /* Rotate to form a tick mark */
+}
